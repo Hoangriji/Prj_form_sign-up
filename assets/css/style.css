@@ -53,16 +53,17 @@ body{
     align-items: center;
     border: 2px solid #000000;
     border-radius: 10px;
-    /* box-shadow: 0 0 20px var(--color-second); */
+    box-shadow: 0 0 20px var(--color-second);
     background-color: var(--color-main);
-    animation: ripple 1.5s infinite ease-in-out;
+    /* animation: ripple 1.5s infinite ease-in-out; */
 }
 .sign-up_title{
     text-align: center;
     margin-bottom: 20px;
     font-size: 40px;
     color: var(--color-main);
-    text-shadow: 0 0 5px #156dd2, 0 0 20px var(--color-second);
+    /* text-shadow: 0 0 5px #156dd2, 0 0 20px var(--color-second); */
+    animation: textbox 1.5s infinite ease-in-out;
 }
 .container_input{
     position: relative;
@@ -142,14 +143,16 @@ body{
     border: 2px solid #000000;
     border-radius: 10px;
     background-color: var(--color-main);
-    animation: ripple1 1.5s infinite ease-in-out;
+    box-shadow: 0 0 20px var(--color-third);
+    /* animation: ripple1 1.5s infinite ease-in-out; */
 }
 .sign-in_title{
     text-align: center;
     margin-bottom: 20px;
     font-size: 40px;
     color: var(--color-main);
-    text-shadow: 0 0 5px #1eea10, 0 0 20px var(--color-third);
+    /* text-shadow: 0 0 5px #1eea10, 0 0 20px var(--color-third); */
+    animation: textbox1 1.5s infinite ease-in-out;
 }
 .sign-in_btn{
     width: 200px;
@@ -190,6 +193,13 @@ body{
     color: red;
     text-decoration: underline;
 }
+#sign-in_btn{
+    color: var(--color-third);
+    cursor: pointer;
+    border: none;
+    background-color: var(--color-main);
+    padding: 5px;
+}
 
 /* forgot password form */
 .container_form_forgot-pass{
@@ -210,14 +220,16 @@ body{
     border-radius: 10px;
     box-shadow: 0 0 20px var(--color-third);
     background-color: var(--color-main);
-    animation: ripple1 1.5s infinite ease-in-out;
+    /* animation: ripple1 1.5s infinite ease-in-out; */
+    box-shadow: 0 0 20px var(--color-third);
 }
 .forgot-pass_title{
     text-align: center;
     margin-bottom: 20px;
     font-size: 40px;
     color: var(--color-main);
-    text-shadow: 0 0 5px #1eea10, 0 0 20px var(--color-third);
+    /* text-shadow: 0 0 5px #1eea10, 0 0 20px var(--color-third); */
+    animation: textbox1 1.5s infinite ease-in-out;
 }
 .forgot-pass_btn{
     width: 200px;
@@ -267,5 +279,234 @@ body{
     }
     100% {
         box-shadow: 0 0 20px var(--color-third);
+    }
+}
+
+@keyframes textbox {
+    0% {
+        text-shadow: 0 0 10px var(--color-second);
+    }
+    50% {
+        text-shadow: 0 0 20px var(--color-second);
+    }
+    100% {
+        text-shadow: 0 0 10px var(--color-second);
+    }
+}
+
+@keyframes textbox1 {
+    0% {
+        text-shadow: 0 0 10px var(--color-third);
+    }
+    50% {
+        text-shadow: 0 0 20px var(--color-third);
+    }
+    100% {
+        text-shadow: 0 0 10px var(--color-third);
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 1300px){
+    .sign-in_more{
+        margin-top: -7%;
+    }
+    .forgot{
+        margin-top: -9%;
+    }
+}
+@media screen and (max-width: 1100px){
+    .sign-up{
+        margin-top: -6%;
+    }
+    .sign-in_more{
+        margin-top: -10%;
+    }
+    .forgot{
+        margin-top: -9%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .sign-up_form{
+        width: 90%;
+    }
+    .sign-up_title{
+        font-size: 30px;
+    }
+    .input{
+        width: 80%;
+    }
+    .sign-up_btn{
+        width: 150px;
+        height: 30px;
+        font-size: 18px;
+    }
+    .sign-up{
+        margin-top: -5%;
+    }
+    .sign-in_form{
+        width: 90%;
+    }
+    .sign-in_title{
+        font-size: 30px;
+    }
+    .sign-in_btn{
+        width: 150px;
+        height: 30px;
+        font-size: 18px;
+    }
+    .sign-in_more{
+        margin-top: -10%;
+    }
+    .forgot_pass{
+        font-size: 16px;
+    }
+    .forgot{
+        margin-top: -5%;
+    }
+    .forgot-pass_form{
+        width: 90%;
+    }
+    .forgot-pass_title{
+        font-size: 30px;
+    }
+    .forgot-pass_btn{
+        width: 150px;
+        height: 30px;
+        font-size: 18px;
+    }
+    
+}
+@media screen and (max-width: 900px){
+    .sign-up{
+        margin-top: -6%;
+    }
+    .sign-in_more{
+        margin-top: -11%;
+    }
+    .forgot{
+        margin-top: -9%;
+    }
+}
+@media screen and (max-width: 768px){
+    .sign-up_form{
+        width: 90%;
+    }
+    .sign-up_title{
+        font-size: 30px;
+    }
+    .input{
+        width: 80%;
+    }
+    .sign-up_btn{
+        width: 150px;
+        height: 30px;
+        font-size: 18px;
+    }
+    .sign-up{
+        margin-top: -8%;
+    }
+    .sign-in_form{
+        width: 90%;
+    }
+    .sign-in_title{
+        font-size: 30px;
+    }
+    .sign-in_btn{
+        width: 150px;
+        height: 30px;
+        font-size: 18px;
+    }
+    .sign-in_more{
+        margin-top: -14%;
+    }
+    .forgot_pass{
+        font-size: 16px;
+    }
+    .forgot{
+        margin-top: -10%;
+    }
+    .forgot-pass_form{
+        width: 90%;
+    }
+    .forgot-pass_title{
+        font-size: 30px;
+    }
+    .forgot-pass_btn{
+        width: 150px;
+        height: 30px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 600px){
+    .sign-up{
+        margin-top: -8%;
+    }
+    .sign-in_more{
+        margin-top: -15%;
+    }
+    .forgot{
+        margin-top: -11%;
+    }
+}
+@media screen and (max-width: 480px){
+    .sign-up_form{
+        width: 90%;
+    }
+    .sign-up_title{
+        font-size: 30px;
+    }
+    .input{
+        width: 80%;
+    }
+    .sign-up_btn{
+        width: 150px;
+        height: 30px;
+        font-size: 18px;
+    }
+    .sign-up{
+        margin-top: -11%;
+    }
+    .sign-in_form{
+        width: 90%;
+    }
+    .sign-in_title{
+        font-size: 30px;
+    }
+    .sign-in_btn{
+        width: 150px;
+        height: 30px;
+        font-size: 18px;
+    }
+    .sign-in_more{
+        margin-top: -20%;
+    }
+    .forgot_pass{
+        font-size: 16px;
+    }
+    .forgot{
+        margin-top: -12%;
+    }
+    .forgot-pass_form{
+        width: 90%;
+    }
+    .forgot-pass_title{
+        font-size: 30px;
+    }
+    .forgot-pass_btn{
+        width: 150px;
+        height: 30px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 375px){
+    .sign-up{
+        margin-top: -12%;
+    }
+    .sign-in_more{
+        margin-top: -25%;
+    }
+    .forgot{
+        margin-top: -15%;
     }
 }
