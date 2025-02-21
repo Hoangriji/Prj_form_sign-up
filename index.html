@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Form</title>
+    <title>World Tech</title>
 </head>
+
 <body>
-    
-    <script src="assets/js/index.js"></script>
+    <div class="container">
+        <video class="video-bg" autoplay loop muted playsinline>
+            <source src="assets/img/video-bg.mp4" type="video/mp4">
+        </video>
+
+        <div class="container_form_sign-up" id="sign-up_form">
+            <form class="sign-up_form" action="">
+                <h1 class="sign-up_title">Create account</h1>
+                <div class="container_input">
+                    <input type="text" name="name" placeholder="" class="input" required>
+                    <label for="name" class="place">Username</label>
+                </div>
+                <div class="container_input">
+                    <input type="email" name="email" placeholder="" class="input" required>
+                    <label for="email" class="place">Email</label>
+                </div>
+                <div class="container_input">
+                    <input type="password" name="password" placeholder="" class="input" required>
+                    <label for="password" class="place">Password</label>
+                </div>
+                <div class="container_input">
+                    <input type="password" name="confirm_password" placeholder="" class="input" required>
+                    <label for="confirm_password" class="place">Confirm password</label>
+                </div>
+                <button type="submit" class="sign-up_btn">Sign Up</button>
+            </form>
+            <p class="sign-up">Already have an account? <button id="sign-in">Sign In</button></p>
+        </div>
+
+        <div class="container_form_sign-in" id="sign-in_form">
+            <form class="sign-in_form" action="">
+                <h1 class="sign-in_title">Join the world</h1>
+                <div class="container_input">
+                    <input type="email" name="email" placeholder="" class="input" required>
+                    <label for="email" class="place">Email</label>
+                </div>
+                <div class="container_input">
+                    <input type="password" name="password" placeholder="" class="input" required>
+                    <label for="password" class="place">Password</label>
+                </div>
+                <button type="submit" class="sign-up_btn">Sign In</button>
+            </form>
+
+            <div class="sign-in_more">
+                <button class="forgot_pass" id="forgot_pass">Forgot Password?</button>
+                <p>Don't have an account? <button id="sign-up">Sign Up</button></p>
+            </div>
+        </div>
+
+        <div class="container_form_forgot-pass" id="forgot-pass_form">
+            <form class="forgot-pass_form" action="">
+                <h1 class="forgot-pass_title">Forgot Password</h1>
+                <div class="container_input">
+                    <input type="email" name="email" placeholder="" class="input" required>
+                    <label for="email" class="place">Email</label>
+                </div>
+                <button type="submit" class="sign-up_btn">Send</button>
+            </form>
+            <p class="forgot">Remember your password? <button id="sign-in-forgot">Sign In</button></p>
+        </div>
+
+    </div>
+
+    <script type="module" src="assets/js/index.js" defer></script>
 </body>
+
 </html>

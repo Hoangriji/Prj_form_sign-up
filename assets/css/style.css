@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sour Gummy', cursive;
+}
+:root{
+    --color-main: #ffffff;
+    --color-second: #3983d6;
+    --color-third: #36d42b;
+    --color-text: #000;
+}
+body{
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* sign-up form */
+.container_form_sign-up{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sign-up_form{
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    /* box-shadow: 0 0 20px var(--color-second); */
+    background-color: var(--color-main);
+    animation: ripple 1.5s infinite ease-in-out;
+}
+.sign-up_title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--color-main);
+    text-shadow: 0 0 5px #156dd2, 0 0 20px var(--color-second);
+}
+.container_input{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    width: 60%;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid var(--color-text);
+    border-radius: 10px;
+    outline: none;
+    overflow: hidden;
+}
+.place{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .4s;
+    background-color: var(--color-main);
+    padding: 0 10px;
+}   
+.input:focus ~ .place,
+.input:valid ~ .place{
+    top: 0;
+}
+.sign-up_btn{
+    width: 200px;
+    height: 35px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid var(--color-text);
+}
+.sign-up_btn:hover{ 
+    box-shadow: 0 0 15px var(--color-second);
+}
+.sign-up{
+    margin-top: -4%;
+}
+#sign-in{
+    color: var(--color-second);
+    cursor: pointer;
+    border: none;
+    background-color: var(--color-main);
+}
+#sign-in:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+/* sign-in form */
+.container_form_sign-in{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sign-in_form{
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: var(--color-main);
+    animation: ripple1 1.5s infinite ease-in-out;
+}
+.sign-in_title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--color-main);
+    text-shadow: 0 0 5px #1eea10, 0 0 20px var(--color-third);
+}
+.sign-in_btn{
+    width: 200px;
+    height: 35px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid var(--color-text);
+}
+.sign-in_btn:hover{ 
+    box-shadow: 0 0 15px var(--color-third);
+}
+.sign-in_more{
+    margin-top: -7%;
+    text-align: center;
+}
+.forgot_pass{
+    color: var(--color-third);
+    cursor: pointer;
+    border: none;
+    background-color: var(--color-main);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.forgot_pass:hover{
+    color: red;
+    text-decoration: underline;
+}
+#sign-up{
+    color: var(--color-third);
+    cursor: pointer;
+    border: none;
+    background-color: var(--color-main);
+    padding: 5px;
+}
+#sign-up:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+/* forgot password form */
+.container_form_forgot-pass{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.forgot-pass_form{
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--color-third);
+    background-color: var(--color-main);
+    animation: ripple1 1.5s infinite ease-in-out;
+}
+.forgot-pass_title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--color-main);
+    text-shadow: 0 0 5px #1eea10, 0 0 20px var(--color-third);
+}
+.forgot-pass_btn{
+    width: 200px;
+    height: 35px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid var(--color-text);
+}
+.forgot-pass_btn:hover{ 
+    box-shadow: 0 0 15px var(--color-third);
+}
+#sign-in-forgot{
+    color: var(--color-third);
+    cursor: pointer;
+    border: none;
+    background-color: var(--color-main);
+}
+#sign-in-forgot:hover{
+    color: red;
+    text-decoration: underline;
+}
+.forgot{
+    margin-top: -4%;
+}
+
+/* effect */
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 20px var(--color-second);
+    }
+    50% {
+        box-shadow: 0 0 35px var(--color-second);
+    }
+    100% {
+        box-shadow: 0 0 20px var(--color-second);
+    }
+}
+
+@keyframes ripple1 {
+    0% {
+        box-shadow: 0 0 20px var(--color-third);
+    }
+    50% {
+        box-shadow: 0 0 35px var(--color-third);
+    }
+    100% {
+        box-shadow: 0 0 20px var(--color-third);
+    }
+}
