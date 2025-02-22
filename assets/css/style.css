@@ -7,7 +7,7 @@
     font-family: 'Sour Gummy', cursive;
 }
 :root{
-    --color-main: #ffffff;
+    --color-main: #FEFEFE75;
     --color-second: #3983d6;
     /* --color-third: #36d42b; */
     --color-third: #13ca91;
@@ -81,7 +81,7 @@ body{
     height: 40px;
     text-align: center;
     font-size: 16px;
-    border: 1px solid var(--color-text);
+    border: 2px solid var(--color-text);
     border-radius: 10px;
     outline: none;
     overflow: hidden;
@@ -94,7 +94,9 @@ body{
     font-size: 16px;
     pointer-events: none;
     transition: .4s;
-    background-color: var(--color-main);
+    background-color: var(--color-text1);
+    /* background-image: linear-gradient(to bottom, , var(--color-text1)); */
+    border-radius: 10px;
     padding: 0 10px;
 }   
 .input:focus ~ .place,
@@ -117,10 +119,13 @@ body{
     margin-top: -4%;
 }
 #sign-in{
-    color: var(--color-second);
+    color: var(--color-text1);
     cursor: pointer;
     border: none;
-    background-color: var(--color-main);
+    font-size: large;
+    font-weight: bold;
+    background-color: transparent; 
+    animation: textbox 1.5s infinite ease-in-out;
 }
 #sign-in:hover{
     color: red;
@@ -173,23 +178,30 @@ body{
     text-align: center;
 }
 .forgot_pass{
-    color: var(--color-third);
+    color: var(--color-text1);
     cursor: pointer;
     border: none;
-    background-color: var(--color-main);
+    background-color: transparent;
     padding: 5px;
     margin-bottom: 10px;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    animation: textbox1 1.5s infinite ease-in-out;
 }
 .forgot_pass:hover{
     color: red;
     text-decoration: underline;
 }
 #sign-up{
-    color: var(--color-third);
+    color: var(--color-text1);
     cursor: pointer;
     border: none;
-    background-color: var(--color-main);
+    background-color: transparent;
+    font-size: large;
+    font-weight: bold;
     padding: 5px;
+    animation: textbox1 1.5s infinite ease-in-out;
 }
 #sign-up:hover{
     color: red;
@@ -246,10 +258,13 @@ body{
     box-shadow: 0 0 15px var(--color-third);
 }
 #sign-in-forgot{
-    color: var(--color-third);
+    color: var(--color-text1);
     cursor: pointer;
     border: none;
-    background-color: var(--color-main);
+    background-color: transparent;  
+    font-size: large;
+    font-weight: bold;
+    animation: textbox1 1.5s infinite ease-in-out;
 }
 #sign-in-forgot:hover{
     color: red;
@@ -512,6 +527,15 @@ body{
         height: 30px;
         font-size: 18px;
     }
+    .sign-up_btn{
+        width: 80%;
+    }
+    .sign-in_btn{
+        width: 80%;
+    }
+    .forgot-pass_btn{
+        width: 80%;
+    }
 }
 @media screen and (max-width: 375px){
     .sign-up{
@@ -522,5 +546,14 @@ body{
     }
     .forgot{
         margin-top: -15%;
+    }
+    .sign-up_btn{
+        width: 80%;
+    }
+    .sign-in_btn{
+        width: 80%;
+    }
+    .forgot-pass_btn{
+        width: 80%;
     }
 }
