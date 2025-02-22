@@ -8,22 +8,22 @@ const form2 = document.getElementById('sign-in_form');
 const form3 = document.getElementById('forgot-pass_form');
 
 signin.addEventListener("click", () => {
-    form2.style.animation = 'move 0.5s ease-in-out';
+    form2.style.animation = 'move 0.6s ease-in-out';
     form2.style.display = "flex";
     form1.style.display = "none";
 });
 signup.addEventListener("click", () => {
-    form1.style.animation = 'move 0.5s ease-in-out';
+    form1.style.animation = 'move 0.6s ease-in-out';
     form1.style.display = "flex";
     form2.style.display = "none";
 });
 forgot.addEventListener("click", () => {
-    form3.style.animation = 'move 0.5s ease-in-out';
+    form3.style.animation = 'move 0.6s ease-in-out';
     form3.style.display = "flex";
     form2.style.display = "none";
 });
 signin1.addEventListener("click", () => {
-    form2.style.animation = 'move 0.5s ease-in-out';
+    form2.style.animation = 'move 0.6s ease-in-out';
     form2.style.display = "flex";
     form3.style.display = "none";
 });
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         submitButton.disabled = !allFilled;
         submitButton.style.color = allFilled ? '#3983d6' : '#3e3e3e';
         submitButton.style.background = allFilled ? '#ffffff' : '#c2c2c2';
+        submitButton.style.boxShadow = allFilled ? "0 0 15px #3983d6" : "";
     }
 
     inputs.forEach(input => {
@@ -66,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
         submitButton.disabled = !allFilled;
         submitButton.style.color = allFilled ? '#13ca91' : '#3e3e3e';
         submitButton.style.background = allFilled ? '#ffffff' : '#c2c2c2';
+        submitButton.style.border = allFilled ? '1px solid #000' : '1px solid #000';
+        submitButton.style.boxShadow = allFilled ? "0 0 15px #13ca91" : "";
     }
 
     inputs.forEach(input => {
@@ -89,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         submitButton.disabled = !allFilled;
         submitButton.style.color = allFilled ? '#13ca91' : '#3e3e3e';
         submitButton.style.background = allFilled ? '#ffffff' : '#c2c2c2';
+        submitButton.style.boxShadow = allFilled ? "0 0 15px #13ca91" : "";
     }
 
     inputs.forEach(input => {
