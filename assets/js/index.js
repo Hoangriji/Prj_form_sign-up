@@ -9,17 +9,21 @@ const form3 = document.getElementById('forgot-pass_form');
 
 signin.addEventListener("click", () => {
     form2.style.display = "flex";
+    form2.style.animation = 'move 0.5s ease-in-out';
     form1.style.display = "none";
 });
 signup.addEventListener("click", () => {
     form1.style.display = "flex";
+    form1.style.animation = 'move 0.5s ease-in-out';
     form2.style.display = "none";
 });
 forgot.addEventListener("click", () => {
     form3.style.display = "flex";
+    form3.style.animation = 'move 0.5s ease-in-out';
     form2.style.display = "none";
 });
 signin1.addEventListener("click", () => {
     form2.style.display = "flex";
+    form2.style.animation = 'move 0.5s ease-in-out';
     form3.style.display = "none";
 });
