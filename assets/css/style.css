@@ -71,7 +71,7 @@ body{
 .container_input{
     position: relative;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,7 +101,7 @@ body{
 }   
 .input:focus ~ .place,
 .input:valid ~ .place{
-    top: 0;
+    top: -24%;
     border: 2px solid var(--color-text);
     border-bottom: none;
     border-radius: 10px 10px 0 0;
